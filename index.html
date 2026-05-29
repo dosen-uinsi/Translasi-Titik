@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=1180" />
   <title>Aplikasi Translasi Titik</title>
   <style>
     :root{
@@ -2115,6 +2115,344 @@
         flex-basis:68px !important;
         min-width:64px;
       }
+    }
+
+
+    /* ===== Kunci tampilan laptop di semua perangkat =====
+       Tujuan: tampilan di HP/tablet tetap sama seperti di laptop,
+       tidak berubah menjadi layout bertumpuk/versi mobile. */
+    :root{
+      --desktop-lock-width:1180px;
+    }
+
+    html,
+    body{
+      width:100% !important;
+      min-width:var(--desktop-lock-width) !important;
+      max-width:none !important;
+      overflow-x:auto !important;
+    }
+
+    body{
+      -webkit-text-size-adjust:100%;
+      text-size-adjust:100%;
+    }
+
+    img,
+    svg,
+    canvas{
+      max-width:none;
+    }
+
+    .page{
+      width:var(--desktop-lock-width) !important;
+      min-width:var(--desktop-lock-width) !important;
+      max-width:var(--desktop-lock-width) !important;
+      margin:0 auto !important;
+      padding:28px 0 44px !important;
+    }
+
+    .page > .scaffold-hero{
+      margin:0 0 24px !important;
+      border-radius:var(--radius) !important;
+    }
+
+    .scaffold-hero{
+      padding:28px 30px 22px !important;
+    }
+
+    .scaffold-title-row{
+      display:flex !important;
+      flex-direction:row !important;
+      align-items:center !important;
+      gap:16px !important;
+    }
+
+    .scaffold-title-hudoq{
+      width:104px !important;
+      height:auto !important;
+      flex:0 0 auto !important;
+    }
+
+    .scaffold-hero h2{
+      font-size:42px !important;
+      line-height:1.08 !important;
+      letter-spacing:-.045em !important;
+      white-space:nowrap !important;
+      overflow-wrap:normal !important;
+    }
+
+    .scaffold-hero-actions{
+      display:flex !important;
+      flex-direction:row !important;
+      flex-wrap:wrap !important;
+      gap:12px !important;
+      width:auto !important;
+      margin-top:16px !important;
+    }
+
+    .scaffold-hero-btn{
+      width:auto !important;
+      min-width:auto !important;
+      min-height:46px !important;
+      padding:12px 18px !important;
+      font-size:15px !important;
+      text-align:center !important;
+      flex:0 0 auto !important;
+    }
+
+    .app-card,
+    .scaffold-section{
+      width:100% !important;
+      min-width:0 !important;
+      max-width:none !important;
+    }
+
+    .formula-area{
+      padding:30px 34px 34px !important;
+    }
+
+    .formula-header{
+      display:flex !important;
+      align-items:center !important;
+      justify-content:space-between !important;
+      flex-direction:row !important;
+      margin-bottom:22px !important;
+    }
+
+    .triangle-card{
+      display:grid !important;
+      grid-template-columns:minmax(320px, 440px) minmax(260px, 1fr) !important;
+      gap:24px !important;
+      padding:22px !important;
+      margin-bottom:22px !important;
+      align-items:center !important;
+    }
+
+    .triangle-visual{
+      min-height:356px !important;
+      padding:18px !important;
+    }
+
+    .triangle-visual svg{
+      width:min(100%,410px) !important;
+      max-width:410px !important;
+    }
+
+    .triangle-info{
+      padding:0 8px !important;
+    }
+
+    .formula-grid{
+      display:grid !important;
+      grid-template-columns:minmax(270px, 300px) minmax(0, 1fr) !important;
+      gap:20px !important;
+      align-items:stretch !important;
+    }
+
+    .token-bank,
+    .drop-zone-card{
+      padding:20px !important;
+    }
+
+    .tokens{
+      display:grid !important;
+      grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+      gap:12px !important;
+    }
+
+    .formula-drop{
+      min-height:148px !important;
+      gap:12px !important;
+      padding:18px !important;
+      flex-wrap:nowrap !important;
+      justify-content:center !important;
+    }
+
+    .slot{
+      width:116px !important;
+      min-width:0 !important;
+      max-width:none !important;
+      min-height:78px !important;
+      flex:0 0 auto !important;
+    }
+
+    .slot.operator-slot{
+      width:72px !important;
+      flex:0 0 auto !important;
+    }
+
+    .diagram-panel{
+      padding:64px 42px 38px !important;
+    }
+
+    .diagram-panel::before{
+      inset:12px !important;
+      border-radius:26px !important;
+    }
+
+    .diagram-row{
+      display:grid !important;
+      grid-template-columns:minmax(260px, 290px) minmax(390px, 1fr) minmax(260px, 290px) !important;
+      gap:26px !important;
+      min-height:250px !important;
+      align-items:center !important;
+    }
+
+    .point-block{
+      min-height:250px !important;
+      gap:16px !important;
+      justify-content:center !important;
+    }
+
+    .point-letter{
+      min-width:88px !important;
+      text-align:center !important;
+      font-size:94px !important;
+      letter-spacing:-.06em !important;
+      transform:none !important;
+    }
+
+    .matrix{
+      gap:12px !important;
+      padding:18px 28px !important;
+    }
+
+    .box-red{
+      width:78px !important;
+      height:66px !important;
+      border-radius:14px !important;
+    }
+
+    .arrow-wrap{
+      width:auto !important;
+      min-height:250px !important;
+      margin:0 !important;
+      display:flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+    }
+
+    .translation-label{
+      top:-30px !important;
+      gap:28px !important;
+      font-size:34px !important;
+      align-items:center !important;
+    }
+
+    .matrix.small{
+      min-width:120px !important;
+      gap:9px !important;
+      padding:14px 30px !important;
+    }
+
+    .box-red.small{
+      width:58px !important;
+      height:48px !important;
+      border-radius:11px !important;
+    }
+
+    .arrow-svg{
+      width:100% !important;
+      max-width:510px !important;
+      height:80px !important;
+      margin-top:0 !important;
+      display:block !important;
+    }
+
+    .diagram-control-panel{
+      width:min(760px,100%) !important;
+      margin:26px auto 0 !important;
+      padding:0 !important;
+    }
+
+    .diagram-button-row{
+      gap:12px !important;
+    }
+
+    .diagram-button-row .action,
+    button.action{
+      width:auto !important;
+      max-width:none !important;
+      min-width:150px !important;
+      flex:0 0 auto !important;
+    }
+
+    .scaffold-layout{
+      display:grid !important;
+      grid-template-columns:minmax(360px, 1.08fr) minmax(310px, .92fr) !important;
+      gap:18px !important;
+      padding:22px !important;
+    }
+
+    #scaffoldSvg{
+      display:block !important;
+      width:100% !important;
+      min-height:480px !important;
+      height:auto !important;
+    }
+
+    .scaffold-map-head,
+    .scaffold-question-head{
+      display:flex !important;
+      flex-direction:row !important;
+      align-items:center !important;
+      justify-content:space-between !important;
+    }
+
+    .scaffold-step-box{
+      display:grid !important;
+      grid-template-columns:1fr minmax(96px,130px) !important;
+      gap:10px !important;
+      align-items:end !important;
+    }
+
+    .scaffold-actions{
+      display:flex !important;
+      flex-direction:row !important;
+      gap:10px !important;
+      flex-wrap:wrap !important;
+    }
+
+    .scaffold-actions .action{
+      flex:1 1 140px !important;
+      min-width:140px !important;
+      width:auto !important;
+      max-width:none !important;
+    }
+
+    .scaffold-point-list{
+      margin:0 22px 22px !important;
+      padding:16px 18px !important;
+    }
+
+    .scaffold-legend-grid{
+      display:grid !important;
+      grid-template-columns:repeat(5, minmax(0,1fr)) !important;
+      gap:10px !important;
+    }
+
+    .scaffold-hudoq-control{
+      grid-template-columns:minmax(0,1fr) auto !important;
+    }
+
+    .scaffold-hudoq-pad{
+      display:grid !important;
+      grid-template-columns:repeat(3, 54px) !important;
+      gap:8px !important;
+    }
+
+    .hudoq-btn,
+    .hudoq-pad-spacer{
+      width:54px !important;
+      height:48px !important;
+      min-height:0 !important;
+    }
+
+    .dialog{
+      width:min(400px,100%) !important;
+      border-radius:26px !important;
+      padding:22px !important;
     }
 
 </style>
